@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Color</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.name }}</td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.color }}</td>
+    </tr>
+    <tr *ngIf="cars?.length === 0">
+      <td colspan="3">No cars found</td>
+    </tr>
+  </tbody>
+</table>

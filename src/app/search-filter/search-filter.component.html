@@ -1,0 +1,36 @@
+<div class="filter">
+  <label for="name">Name:</label>
+  <input type="text" id="name" [ngModel]="name" (keyup)="updateName($event)" />
+</div>
+
+<div class="filter">
+  <label for="brand">Brand:</label>
+  <select
+    name="brand"
+    id="brand"
+    [ngModel]="brand"
+    (ngModelChange)="updateBrand($event)"
+  >
+    <option [ngValue]="null"></option>
+    <option value="Toyota">Toyota</option>
+    <option value="Ford">Ford</option>
+    <option value="Volkswagen">Volkswagen</option>
+  </select>
+</div>
+
+<div class="filter">
+  <label for="name">Color:</label>
+
+  <select
+    name="color"
+    id="color"
+    [ngModel]="color"
+    (ngModelChange)="updateColor($event)"
+  >
+    <option [ngValue]="null"></option>
+    <option value="black">black</option>
+    <option value="blue">blue</option>
+    <option value="red">red</option>
+    <option value="green">green</option>
+  </select>
+</div>

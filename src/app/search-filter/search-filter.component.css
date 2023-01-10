@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.filter label {
+  min-width: 60px;
+}

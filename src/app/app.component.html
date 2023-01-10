@@ -1,0 +1,14 @@
+<ng-container *ngIf="vm$ | async as vm">
+  <h1>Car catalog</h1>
+
+  <app-search-filter
+    [name]="vm.name"
+    [brand]="vm.brand"
+    [color]="vm.color"
+    (filterChanged)="filterChanged($event)"
+  ></app-search-filter>
+
+  <button type="button" (click)="clear()">Clear</button>
+
+  <app-search-results [cars]="vm.results"></app-search-results>
+</ng-container>
